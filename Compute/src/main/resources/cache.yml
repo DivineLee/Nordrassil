@@ -1,0 +1,13 @@
+compute.cache:
+  calculation:
+    ttl: 1440000
+    maxIdleTime: 720000
+    maxSize: 0
+  remote:
+    ttl: 1440000
+    maxIdleTime: 720000
+    maxSize: 0
+  usually:
+    ttl: 1440000
+    maxIdleTime: 720000
+    maxSize: 0

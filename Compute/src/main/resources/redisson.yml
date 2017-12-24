@@ -1,0 +1,31 @@
+---
+sentinelServersConfig:
+  idleConnectionTimeout: 10000
+  pingTimeout: 1000
+  connectTimeout: 10000
+  timeout: 3000
+  retryAttempts: 3
+  retryInterval: 1500
+  reconnectionTimeout: 3000
+  failedAttempts: 3
+  password: null
+  subscriptionsPerConnection: 5
+  clientName: redisson
+  loadBalancer: !<org.redisson.connection.balancer.RoundRobinLoadBalancer> {}
+  slaveSubscriptionConnectionMinimumIdleSize: 1
+  slaveSubscriptionConnectionPoolSize: 50
+  slaveConnectionMinimumIdleSize: 10
+  slaveConnectionPoolSize: 64
+  masterConnectionMinimumIdleSize: 10
+  masterConnectionPoolSize: 64
+  readMode: "SLAVE"
+  sentinelAddresses:
+  - "redis://192.168.99.110:7100"
+  - "redis://192.168.99.110:7200"
+  - "redis://192.168.99.110:7300"
+  masterName: "master1"
+  database: 0
+threads: 0
+nettyThreads: 0
+codec: !<org.redisson.codec.KryoCodec> {}
+useLinuxNativeEpoll: false
